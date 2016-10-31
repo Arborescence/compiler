@@ -233,7 +233,7 @@ enum scanIdent(char* token){
     return IDENT_SYM;        
 }
 
-enum scanIdent(char* token){
+enum scanNumber(char* token){
     
     int idx = 1; //we already checked first char
     int isHex = 0;
@@ -244,7 +244,7 @@ enum scanIdent(char* token){
                 isHex = 1;
             ++idx;
         } else {
-            //TODO ERROR, NOT IDENT
+            //TODO ERROR, NOT Number
         }
     
     if(isHex = 1)
@@ -291,80 +291,3 @@ TokenList Scannerino(Tokenlist tokens){
         currentToken = tokens -> token;
     }
 }
-
-/**
-	reservedWords[] =  
-    reservedWords[1] =  
-    reservedWords[2] =  
-    reservedWords[3] =  
-    reservedWords[4] =  
-    reservedWords[5] =  
-    reservedWords[6] =  
-    reservedWords[7] =  
-    reservedWords[8] =  
-    reservedWords[9] =  
-    reservedWords[10] = 
-    reservedWords[11] = 
-    reservedWords[12] = 
-    reservedWords[13] = 
-    reservedWords[14] = 
-    reservedWords[15] = 
-    reservedWords[16] = 
-    reservedWords[17] = 
-    reservedWords[18] = 
-    reservedWords[19] = 
-    reservedWords[20] = 
-    reservedWords[21] = 
-    reservedWords[22] = 
-    reservedWords[23] = 
-    reservedWords[24] = 
-    reservedWords[25] = 
-    reservedWords[26] = 
-    reservedWords[27] = 
-    reservedWords[28] = 
-    reservedWords[29] = 
-    reservedWords[30] = 
-    reservedWords[31] = 
-    reservedWords[32] = 
-    reservedWords[33] = 
-    reservedWords[34] = 
-    reservedWords[35] = 
-    reservedWords[36] = 
-
-MODULE_SYM
-BEGIN_SYM
-END_SYM
-CONST_SYM
-TYPE_SYM
-VAR_SYM
-PROCEDURE_SYM
-ARRAY_SYM
-OF_SYM
-RECORD_SYM
-EXIT_SYM
-RETURN_SYM
-WHILE_SYM
-DO_SYM
-THEN_SYM
-ELSIF_SYM
-ELSE_SYM
-REPEAT_SYM
-UNTIL_SYM
-FOR_SYM
-TO_SYM
-BY_SYM
-LOOP_SYM
-CASE_SYM
-DIV_SYM
-MOD_SYM    
-OR_SYM      
-ABS_SYM
-BOOLEAN_SYM
-FALSE_SYM
-INTEGER_SYM
-ODD_SYM
-READ_SYM
-READLN_SYM
-TRUE_SYM
-WRITE_SYM
-WRITELN_SYM
